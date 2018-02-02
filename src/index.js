@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './styles/main.css';
 
-class Modal extends React.PureComponent {
+export default class Modal extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -23,17 +23,40 @@ class Modal extends React.PureComponent {
   }
 
   componentDidMount() {
-    ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
+    const { isOpen } = this.props;
+
+    if (isOpen) {
+      ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
+    }
   }
 
   componentWillReceiveProps(nextProps) {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    const { isOpen, onClose } = this.props;
+    const { wasOpen } = prevProps;
+
+    if (isOpen && !wasOpen) {
+      ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
+    }
+
+    if (!isOpen && wasOpen) {
+      ReactDOM.unmountComponentAtNode(this.domElement);
+
+      if (onClose) {
+        onClose();
+      }
+    }
   }
 
   componentWillUnmount() {
+    const { onClose } = this.props;
     ReactDOM.unmountComponentAtNode(this.domElement);
+
+    if (onClose) {
+      onClose();
+    }
   }
 
   renderModalMarkup() {
@@ -51,8 +74,14 @@ class Modal extends React.PureComponent {
   }
 }
 
-Modal.propTypes = {
-  children: React.PropTypes.any,
+Modal.defaultProps = {
+  isOpen: false,
+  showCloseButton: true,
 };
 
-export default Modal;
+Modal.propTypes = {
+  children: React.PropTypes.any,
+  onClose: React.PropTypes.func,
+  isOpen: React.PropTypes.bool,
+  showCloseButton: React.PropTypes.bool,
+};
