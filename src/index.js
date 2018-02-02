@@ -1,16 +1,15 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { render } from 'react-dom';
 
-import './styles/main.css';
-import buildStore from './buildStore';
-import App from './components/App';
+class Modal extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <h1>React Modal</h1>
+    );
+  }
+}
 
-const store = buildStore();
-
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
+export default Modal;
