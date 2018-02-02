@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-close-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon-Close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1374.000000, -555.000000)">
+        <polygon id="ic-close-white" fill="#FFFFFF" fill-rule="nonzero" points="1398 557.418057 1395.58286 555 1386 564.586483 1376.41714 555 1374 557.418057 1383.58286 567.00454 1374 576.591023 1376.41714 579.009081 1386 569.422598 1395.58286 579.009081 1398 576.591023 1388.41714 567.00454"></polygon>
+    </g>
+</svg>
