@@ -22,11 +22,15 @@ class SimpleExample extends Component {
     return (
       <div>
         <button onClick={this.showModal}>Show Modal</button>
-        <Modal isOpen={this.state.modalIsOpen} onClose={this.hideModal}>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onClose={this.hideModal}
+          closeOnOverlayClick={false}
+        >
           <h1>The content of this modal</h1>
         </Modal>
       </div>
-    )
+    );
   }
 }
 

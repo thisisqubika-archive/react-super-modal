@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import CloseButton from './components/CloseButton';
 
 import './styles/main.css';
 
@@ -20,11 +21,32 @@ export default class Modal extends React.PureComponent {
   }
 
   renderModalMarkup() {
-    const { children } = this.props;
+    const {
+      children,
+      onClose,
+      closeOnOverlayClick,
+      showCloseButton,
+    } = this.props;
+
+    const onOverlayClick = () => {
+      if (closeOnOverlayClick) {
+        onClose();
+      }
+    };
 
     return (
-      <div>
-        {children}
+      <div
+        onClick={onOverlayClick}
+        role="button"
+        tabIndex={0}
+        className="modal-overlay"
+      >
+        <div className="modal-container">
+          {showCloseButton &&
+            <div onClick={onClose}> <CloseButton /> </div>
+          }
+          {children}
+        </div>
       </div>
     );
   }
@@ -43,6 +65,7 @@ Modal.defaultProps = {
   isOpen: false,
   onClose: () => {},
   showCloseButton: true,
+  closeOnOverlayClick: true,
 };
 
 Modal.propTypes = {
@@ -51,4 +74,5 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   isOpen: PropTypes.bool,
   showCloseButton: PropTypes.bool,
+  closeOnOverlayClick: PropTypes.bool,
 };
