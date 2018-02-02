@@ -19,47 +19,6 @@ export default class Modal extends React.PureComponent {
     this.state = {};
   }
 
-  componentWillMount() {
-
-  }
-
-  componentDidMount() {
-    const { isOpen } = this.props;
-
-    if (isOpen) {
-      ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { isOpen, onClose } = this.props;
-    const { wasOpen } = prevProps;
-
-    if (isOpen && !wasOpen) {
-      ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
-    }
-
-    if (!isOpen && wasOpen) {
-      ReactDOM.unmountComponentAtNode(this.domElement);
-
-      if (onClose) {
-        onClose();
-      }
-    }
-  }
-
-  componentWillUnmount() {
-    const { onClose } = this.props;
-    ReactDOM.unmountComponentAtNode(this.domElement);
-
-    if (onClose) {
-      onClose();
-    }
-  }
-
   renderModalMarkup() {
     const { children } = this.props;
 
@@ -71,17 +30,24 @@ export default class Modal extends React.PureComponent {
   }
 
   render() {
-    return null;
+    const { isOpen } = this.props;
+
+    if (!isOpen) return null;
+
+    return ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
   }
 }
 
 Modal.defaultProps = {
+  domElement: 'body',
   isOpen: false,
+  onClose: () => {},
   showCloseButton: true,
 };
 
 Modal.propTypes = {
-  children: PropTypes.any,
+  domElement: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  children: PropTypes.element.isRequired,
   onClose: PropTypes.func,
   isOpen: PropTypes.bool,
   showCloseButton: PropTypes.bool,
