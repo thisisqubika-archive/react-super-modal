@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 import './styles/main.css';
 
@@ -80,8 +81,8 @@ Modal.defaultProps = {
 };
 
 Modal.propTypes = {
-  children: React.PropTypes.any,
-  onClose: React.PropTypes.func,
-  isOpen: React.PropTypes.bool,
-  showCloseButton: React.PropTypes.bool,
+  children: PropTypes.any,
+  onClose: PropTypes.func,
+  isOpen: PropTypes.bool,
+  showCloseButton: PropTypes.bool,
 };

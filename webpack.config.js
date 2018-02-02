@@ -7,7 +7,7 @@ module.exports = {
   entry: ['./src/index.js'],
   output: {
     path: path.resolve('./dist'),
-    filename: 'catapult-dialog.js',
+    filename: 'react-modals.js',
     publicPath: '/dist/',
     libraryTarget: 'commonjs2',
   },
