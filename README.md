@@ -16,6 +16,7 @@ or
 ### Configuration
 | Property        | Description                                   | Default Value |
 |-----------------|-----------------------------------------------|---------------|
+| domElement      | The DOM element in which the modal is going to render. It can be a string for a query selection, or a dom node | body         |
 | isOpen          | Defines if the modal is visible or not        | false         |
 | showCloseButton | Defines if the close button is visible or not | true          |
 | onClose         | Callback when the close button is pressed     | N/A           |
