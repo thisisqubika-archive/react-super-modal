@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles/main.css';
+
 class Modal extends React.PureComponent {
   constructor(props) {
     super(props);
