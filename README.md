@@ -1,20 +1,29 @@
-# React-template
+# React Modals
+An opinionated React modals library based on UX patterns and principles.
 
-This react template provides you with the basic tool set for developing a *react* app, using *redux* as your single source of truth.
+## Install
 
-Besides a helpful folder structure, it also provides a strict linter that you can run with `yarn lint` in order to keep your project's code always clean.
+`npm install react-modals`
 
-It uses *webpack-dev-server* and includes *webpack* configurations for development (*hot-reload*, *hot-module-replacement*).
+or
 
-Setup & Start
----
-- Run `yarn`
+`yarn add react-modals`
 
-- Use `yarn start:dev` to start the server
+## How to use
 
-- Use `yarn lint` to run eslint over the project
+// TODO
 
-Pending
----
-- Production webpack configurations
-- Production build script at `package.json`
+### Configuration
+| Property        | Description                                   | Default Value |
+|-----------------|-----------------------------------------------|---------------|
+| isOpen          | Defines if the modal is visible or not        | false         |
+| showCloseButton | Defines if the close button is visible or not | true          |
+| onClose         | Callback when the close button is pressed     | N/A           |
+
+## Contributing
+
+Please read [CONTRIBUTING.md](LICENSE.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
