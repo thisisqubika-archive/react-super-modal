@@ -1,15 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Modal from 'react-modals';
 
+import SimpleExample from './components/SimpleExample';
 import './styles/main.css';
 
 render(
   <div id="app">
-    <h1>Demo</h1>
-    <Modal isOpen>
-      <div>This is a modal</div>
-    </Modal>
+    <h1>Simple Example</h1>
+    <SimpleExample />
   </div>,
   document.getElementById('root'),
 );
