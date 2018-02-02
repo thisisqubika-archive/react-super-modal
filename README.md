@@ -26,6 +26,7 @@ or
 | domElement      | The DOM element in which the modal is going to render. It can be a string for a query selection, or a dom node | body         |
 | isOpen          | Defines if the modal is visible or not        | false         |
 | showCloseButton | Defines if the close button is visible or not | true          |
+| closeOnOverlayClick | Defines if the modal should be closed when clicking outside it. | true          |
 | onClose         | Callback when the close button is pressed     | N/A           |
 
 ### Examples
