@@ -55,20 +55,20 @@ The easiest way to start contributing is searching open issues by `help wanted` 
 9. Push your branch into your forked remote repository.
 10. Create a new pull request adding any useful comment.
 
-###### Development
-Requirements
+### Development
+###### Requirements
 - yarn
 
-Setup
+###### Setup
 `yarn`
 
-Build library
+###### Build library
 `yarn build`
 
-Running tests
+###### Running tests
 `yarn test`
 
-Running linter
+###### Running linter
 `yarn lint`
 
 ###### Code style and conventions
