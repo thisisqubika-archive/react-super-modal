@@ -57,12 +57,20 @@ export default class Modal extends React.PureComponent {
       closeOnOverlayClick,
       showCloseButton,
       maxWidth,
+      backgroundColor,
+      overlayColor,
+      closeButtonColor,
     } = this.props;
 
-    const onOverlayClick = () => {
+    const onOverlayClick = (event) => {
+      event.stopPropagation();
       if (closeOnOverlayClick) {
         onClose();
       }
+    };
+
+    const onModalClick = (event) => {
+      event.stopPropagation();
     };
 
     return (
@@ -71,24 +79,18 @@ export default class Modal extends React.PureComponent {
         role="button"
         tabIndex={0}
         className="modal-overlay modal-overlay--animated"
+        style={{ backgroundColor: overlayColor }}
       >
-        <div
-          className="modal-container modal-container--animated"
-          style={{ maxWidth }}
-        >
-          {showCloseButton &&
-            <div className="header">
-              <div
-                className="close-button"
-                onClick={onClose}
-              >
-                <CloseButton />
-              </div>
-            </div>
-          }
+        <div onClick={onModalClick} className="modal-container modal-container--animated" style={{ backgroundColor, maxWidth }}>
+          <div className="modal-header">
+            {showCloseButton &&
+              <CloseButton onClose={onClose} closeButtonColor={closeButtonColor} />
+            }
+          </div>
           <div className="modal-content">
             {children}
           </div>
+          <div className="modal-footer" />
         </div>
       </div>
     );
@@ -112,6 +114,9 @@ Modal.defaultProps = {
   closeOnOverlayClick: true,
   closeOnEscapePress: true,
   maxWidth: '640px',
+  backgroundColor: '#FFFFFF',
+  overlayColor: 'rgba(0,0,0,0.3)',
+  closeButtonColor: '#000000',
 };
 
 Modal.propTypes = {
@@ -123,4 +128,7 @@ Modal.propTypes = {
   closeOnOverlayClick: PropTypes.bool,
   closeOnEscapePress: PropTypes.bool,
   maxWidth: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  overlayColor: PropTypes.string,
+  closeButtonColor: PropTypes.string,
 };
