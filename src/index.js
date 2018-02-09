@@ -39,9 +39,9 @@ export default class Modal extends React.PureComponent {
         onClick={onOverlayClick}
         role="button"
         tabIndex={0}
-        className="modal-overlay"
+        className="modal-overlay modal-overlay--animated"
       >
-        <div className="modal-container">
+        <div className="modal-container modal-container--animated">
           {showCloseButton &&
             <div
               className="close-button"

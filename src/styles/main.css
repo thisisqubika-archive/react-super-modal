@@ -1,5 +1,6 @@
 @import "settings/variables";
 @import "settings/customMediaQueries";
+@import "./animations.css";
 
 .modal-container {
   position: absolute;
