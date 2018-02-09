@@ -43,7 +43,12 @@ export default class Modal extends React.PureComponent {
       >
         <div className="modal-container">
           {showCloseButton &&
-            <div onClick={onClose}> <CloseButton /> </div>
+            <div
+              className="close-button"
+              onClick={onClose}
+            >
+              <CloseButton />
+            </div>
           }
           {children}
         </div>

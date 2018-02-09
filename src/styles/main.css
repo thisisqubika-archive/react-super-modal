@@ -20,3 +20,13 @@
   height: 100%;
   background-color: var(--overlayBackground);
 }
+
+.close-button {
+  cursor: pointer;
+  width: var(--closeButtonSize);
+  height: var(--closeButtonSize);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
