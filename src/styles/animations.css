@@ -1,0 +1,25 @@
+@import "settings/variables";
+@import "settings/customMediaQueries";
+
+.modal-container--animated {
+  @media (--tablet) {
+    animation: showmodal 0.4s 0s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.modal-overlay--animated {
+  @media (--tablet) {
+    animation: showOvarlay 0.2s 0s;
+  }
+}
+
+@keyframes showmodal {
+  from {top: -100%;}
+  to {top: 3rem;}
+}
+
+@keyframes showOvarlay {
+  from {opacity:  0;}
+  to {opacity: 1;}
+}
