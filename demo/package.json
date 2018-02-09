@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "webpack-dev-server --hot --inline --content-base dist/",
-    "lint": "eslint ."
+    "lint": "eslint . --fix"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

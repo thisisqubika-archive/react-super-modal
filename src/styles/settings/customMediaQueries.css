@@ -1,0 +1,10 @@
+// CUSTOM MEDIA QUERIES
+// For the moment custom-media doesn't accept variables as param
+// Media queries that target viewports equal or bigger
+@custom-media --desktop (min-width: 1200px);
+@custom-media --tablet (min-width: 768px);
+@custom-media --mobile (min-width: 320px);
+
+// Media queries to target only when the screen is exactly in that viewport
+@custom-media --onlyTablet (width >= 768px) and (width <= 1200px);
+@custom-media --onlyMobile (width >= 320px) and (width <= 768px);

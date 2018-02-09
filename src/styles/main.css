@@ -1,10 +1,13 @@
+@import "settings/variables";
+@import "settings/customMediaQueries";
+
 .modal-container {
   position: absolute;
   top: 3rem;
-  width: calc(100% - 2rem);
+  width: var(--standardWidth);
   height: auto;
-  background-color: white;
-  border-radius: calc(1rem/4);
+  background-color: var(--modalBackground);
+  border-radius: var(--borderRadius);
 }
 
 .modal-overlay {
@@ -15,5 +18,5 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--overlayBackground);
 }
