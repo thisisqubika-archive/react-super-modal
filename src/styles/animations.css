@@ -16,7 +16,7 @@
 
 @keyframes showmodal {
   from {top: -100%;}
-  to {top: 3rem;}
+  to {top: var(--top);}
 }
 
 @keyframes showOvarlay {

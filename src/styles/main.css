@@ -4,11 +4,26 @@
 
 .modal-container {
   position: absolute;
-  top: 3rem;
   width: var(--standardWidth);
   height: auto;
   background-color: var(--modalBackground);
   border-radius: var(--borderRadius);
+  max-height: var(--maxHeight);
+
+  @media (--onlyMobile) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @media (--tablet) {
+    top: var(--top);
+    max-height: var(--maxHeightTablet);
+  }
+
+  @media (--desktop) {
+    max-height: var(--maxHeightDesktop);
+  }
 }
 
 .modal-overlay {
@@ -20,6 +35,25 @@
   width: 100%;
   height: 100%;
   background-color: var(--overlayBackground);
+}
+
+.modal-content {
+  overflow-y: scroll;
+  max-height: calc(var(--maxHeight) - var(--closeButtonSize));
+
+  @media (--tablet) {
+    top: var(--top);
+    max-height: calc(var(--maxHeightTablet) - var(--closeButtonSize))
+  }
+
+  @media (--desktop) {
+    max-height: calc(var(--maxHeightDesktop) - var(--closeButtonSize));
+  }
+}
+
+.header {
+  width: 100%;
+  height: var(--closeButtonSize);
 }
 
 .close-button {
