@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import CloseButton from './components/CloseButton';
-
+import { SCROLL_LOCKED_CLASSNAME } from './constants';
 import './styles/main.css';
 
 export default class Modal extends React.PureComponent {
@@ -26,6 +26,7 @@ export default class Modal extends React.PureComponent {
     const { isOpen, closeOnEscapePress } = this.props;
     const { prevIsOpen } = prevProps;
 
+    if (!isOpen) this.unlockBodyScroll();
     if (closeOnEscapePress && isOpen !== prevIsOpen) {
       if (isOpen) {
         document.body.addEventListener('keydown', this.onEscapePressed);
@@ -39,6 +40,14 @@ export default class Modal extends React.PureComponent {
     if (e.keyCode === 27) {
       this.props.onClose();
     }
+  }
+
+  unlockBodyScroll() {
+    this.domElement.classList.remove(SCROLL_LOCKED_CLASSNAME);
+  }
+
+  lockBodyScroll() {
+    this.domElement.classList.add(SCROLL_LOCKED_CLASSNAME);
   }
 
   renderModalMarkup() {
@@ -86,6 +95,7 @@ export default class Modal extends React.PureComponent {
 
     if (!isOpen) return null;
 
+    this.lockBodyScroll();
     return ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
   }
 }
