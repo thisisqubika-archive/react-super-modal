@@ -4,4 +4,8 @@
   --modalBackground: white;
   --overlayBackground:rgba(0,0,0,0.5);
   --closeButtonSize: 48px;
+  --top: 3rem;
+  --maxHeight: calc(100vh - var(--top));
+  --maxHeightTablet: calc(100vh - 3rem - var(--top));
+  --maxHeightDesktop: calc(100vh - 4rem - var(--top));
 }
