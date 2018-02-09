@@ -23,8 +23,9 @@ or
 ### Configuration
 | Property        | Description                                   | Default Value |
 |-----------------|-----------------------------------------------|---------------|
-| domElement      | The DOM element in which the modal is going to render. It can be a string for a query selection, or a dom node | body         |
+| domElement      | The DOM element (not rendered by react) in which the modal is going to render. It can be a string for a query selection, or a dom node | body         |
 | isOpen          | Defines if the modal is visible or not        | false         |
+| maxWidth        | Defines the max width of the modal for desktop and tables viewports. For mobile it always takes a presetted value | 640px
 | showCloseButton | Defines if the close button is visible or not | true          |
 | closeOnOverlayClick | Defines if the modal should be closed when clicking outside it. | true          |
 | closeOnEscapePress | Defines if the modal should be closed when escape key is pressed. | true          |
