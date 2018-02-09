@@ -8,4 +8,5 @@
   --maxHeight: calc(100vh - var(--top));
   --maxHeightTablet: calc(100vh - 3rem - var(--top));
   --maxHeightDesktop: calc(100vh - 4rem - var(--top));
+  --maxWidthMobile: calc(100vw - 1rem);
 }

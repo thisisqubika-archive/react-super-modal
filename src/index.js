@@ -56,6 +56,7 @@ export default class Modal extends React.PureComponent {
       onClose,
       closeOnOverlayClick,
       showCloseButton,
+      maxWidth,
     } = this.props;
 
     const onOverlayClick = () => {
@@ -71,7 +72,10 @@ export default class Modal extends React.PureComponent {
         tabIndex={0}
         className="modal-overlay modal-overlay--animated"
       >
-        <div className="modal-container modal-container--animated">
+        <div
+          className="modal-container modal-container--animated"
+          style={{ maxWidth }}
+        >
           {showCloseButton &&
             <div className="header">
               <div
@@ -107,6 +111,7 @@ Modal.defaultProps = {
   showCloseButton: true,
   closeOnOverlayClick: true,
   closeOnEscapePress: true,
+  maxWidth: '640px',
 };
 
 Modal.propTypes = {
@@ -117,4 +122,5 @@ Modal.propTypes = {
   showCloseButton: PropTypes.bool,
   closeOnOverlayClick: PropTypes.bool,
   closeOnEscapePress: PropTypes.bool,
+  maxWidth: PropTypes.string,
 };

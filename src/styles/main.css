@@ -14,6 +14,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    /* max-width has to be important to overwrite the style prop
+    *  set in react for desktop/tablet max-width
+    */
+    max-width: var(--maxWidthMobile) !important;
   }
 
   @media (--tablet) {
