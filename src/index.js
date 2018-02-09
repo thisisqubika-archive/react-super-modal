@@ -17,7 +17,28 @@ export default class Modal extends React.PureComponent {
       this.domElement = domElement;
     }
 
+    this.onEscapePressed = this.onEscapePressed.bind(this);
+
     this.state = {};
+  }
+
+  componentDidUpdate(prevProps) {
+    const { isOpen, closeOnEscapePress } = this.props;
+    const { prevIsOpen } = prevProps;
+
+    if (closeOnEscapePress && isOpen !== prevIsOpen) {
+      if (isOpen) {
+        document.body.addEventListener('keydown', this.onEscapePressed);
+      } else {
+        document.body.removeEventListener('keydown', this.onEscapePressed);
+      }
+    }
+  }
+
+  onEscapePressed(e) {
+    if (e.keyCode === 27) {
+      this.props.onClose();
+    }
   }
 
   renderModalMarkup() {
@@ -75,6 +96,7 @@ Modal.defaultProps = {
   onClose: () => {},
   showCloseButton: true,
   closeOnOverlayClick: true,
+  closeOnEscapePress: true,
 };
 
 Modal.propTypes = {
@@ -84,4 +106,5 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   showCloseButton: PropTypes.bool,
   closeOnOverlayClick: PropTypes.bool,
+  closeOnEscapePress: PropTypes.bool,
 };

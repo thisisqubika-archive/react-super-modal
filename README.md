@@ -27,6 +27,7 @@ or
 | isOpen          | Defines if the modal is visible or not        | false         |
 | showCloseButton | Defines if the close button is visible or not | true          |
 | closeOnOverlayClick | Defines if the modal should be closed when clicking outside it. | true          |
+| closeOnEscapePress | Defines if the modal should be closed when escape key is pressed. | true          |
 | onClose         | Callback when the close button is pressed     | N/A           |
 
 ### Examples
