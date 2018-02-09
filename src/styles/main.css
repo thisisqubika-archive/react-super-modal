@@ -42,24 +42,28 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--overlayBackground);
 }
 
 .modal-content {
   overflow-y: scroll;
-  max-height: calc(var(--maxHeight) - var(--closeButtonSize));
+  max-height: calc(var(--maxHeight) - var(--closeButtonSize) - var(--closeButtonSize));
 
   @media (--tablet) {
     top: var(--top);
-    max-height: calc(var(--maxHeightTablet) - var(--closeButtonSize))
+    max-height: calc(var(--maxHeightTablet) - var(--closeButtonSize) - var(--closeButtonSize))
   }
 
   @media (--desktop) {
-    max-height: calc(var(--maxHeightDesktop) - var(--closeButtonSize));
+    max-height: calc(var(--maxHeightDesktop) - var(--closeButtonSize) - var(--closeButtonSize));
   }
 }
 
-.header {
+.modal-header {
+  width: 100%;
+  height: var(--closeButtonSize);
+}
+
+.modal-footer {
   width: 100%;
   height: var(--closeButtonSize);
 }
