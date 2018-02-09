@@ -1,0 +1,6 @@
+:root {
+  --standardWidth: calc(100% - 2rem);
+  --borderRadius: calc(1rem/4);
+  --modalBackground: white;
+  --overlayBackground:rgba(0,0,0,0.5);
+}
