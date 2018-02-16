@@ -2,32 +2,81 @@ import React from 'react';
 import { render } from 'react-dom';
 import 'react-super-modal/src/styles/main.css';
 
-import SimpleExample from './components/SimpleExample';
+import Example from './components/Example';
+import RandomContent from './components/RandomContent';
 
-render(
-  <div id="app">
+const Demo = () => (
+  <div>
     <h1>Simple Example</h1>
-    <SimpleExample />
-    <p style={{ fontSize: 40 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Massa sapien faucibus et molestie ac feugiat. Vel quam elementum pulvinar etiam non. Viverra nibh cras pulvinar mattis. Elementum eu facilisis sed odio. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Id faucibus nisl tincidunt eget nullam. Arcu cursus vitae congue mauris rhoncus. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Volutpat sed cras ornare arcu dui vivamus arcu felis. Facilisis mauris sit amet massa vitae tortor condimentum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Et ultrices neque ornare aenean euismod elementum nisi. Egestas maecenas pharetra convallis posuere morbi leo. Dui ut ornare lectus sit amet est placerat in egestas.
-          </p>
-          <p style={{ fontSize: 40 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Massa sapien faucibus et molestie ac feugiat. Vel quam elementum pulvinar etiam non. Viverra nibh cras pulvinar mattis. Elementum eu facilisis sed odio. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Id faucibus nisl tincidunt eget nullam. Arcu cursus vitae congue mauris rhoncus. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Volutpat sed cras ornare arcu dui vivamus arcu felis. Facilisis mauris sit amet massa vitae tortor condimentum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Et ultrices neque ornare aenean euismod elementum nisi. Egestas maecenas pharetra convallis posuere morbi leo. Dui ut ornare lectus sit amet est placerat in egestas.
-          </p>
+    <Example>
+      <RandomContent />
+    </Example>
 
-    <SimpleExample />
-          <p style={{ fontSize: 40 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Massa sapien faucibus et molestie ac feugiat. Vel quam elementum pulvinar etiam non. Viverra nibh cras pulvinar mattis. Elementum eu facilisis sed odio. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Id faucibus nisl tincidunt eget nullam. Arcu cursus vitae congue mauris rhoncus. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Volutpat sed cras ornare arcu dui vivamus arcu felis. Facilisis mauris sit amet massa vitae tortor condimentum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Et ultrices neque ornare aenean euismod elementum nisi. Egestas maecenas pharetra convallis posuere morbi leo. Dui ut ornare lectus sit amet est placerat in egestas.
-          </p>
-          <p style={{ fontSize: 40 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Massa sapien faucibus et molestie ac feugiat. Vel quam elementum pulvinar etiam non. Viverra nibh cras pulvinar mattis. Elementum eu facilisis sed odio. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Id faucibus nisl tincidunt eget nullam. Arcu cursus vitae congue mauris rhoncus. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Volutpat sed cras ornare arcu dui vivamus arcu felis. Facilisis mauris sit amet massa vitae tortor condimentum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Et ultrices neque ornare aenean euismod elementum nisi. Egestas maecenas pharetra convallis posuere morbi leo. Dui ut ornare lectus sit amet est placerat in egestas.
-          </p>
-          <p style={{ fontSize: 40 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Massa sapien faucibus et molestie ac feugiat. Vel quam elementum pulvinar etiam non. Viverra nibh cras pulvinar mattis. Elementum eu facilisis sed odio. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Id faucibus nisl tincidunt eget nullam. Arcu cursus vitae congue mauris rhoncus. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Volutpat sed cras ornare arcu dui vivamus arcu felis. Facilisis mauris sit amet massa vitae tortor condimentum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Et ultrices neque ornare aenean euismod elementum nisi. Egestas maecenas pharetra convallis posuere morbi leo. Dui ut ornare lectus sit amet est placerat in egestas.
-          </p>
-          <p style={{ fontSize: 40 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor nec feugiat nisl pretium fusce id. Massa sapien faucibus et molestie ac feugiat. Vel quam elementum pulvinar etiam non. Viverra nibh cras pulvinar mattis. Elementum eu facilisis sed odio. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Id faucibus nisl tincidunt eget nullam. Arcu cursus vitae congue mauris rhoncus. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Volutpat sed cras ornare arcu dui vivamus arcu felis. Facilisis mauris sit amet massa vitae tortor condimentum. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Et ultrices neque ornare aenean euismod elementum nisi. Egestas maecenas pharetra convallis posuere morbi leo. Dui ut ornare lectus sit amet est placerat in egestas.
-          </p>
-  </div>,
-  document.getElementById('root'),
+    <input type="text" placeholder="Input Placeholder" />
+
+    <RandomContent />
+    <RandomContent />
+
+    <h1>Example with large content.</h1>
+    <Example>
+      <RandomContent />
+      <div
+        style={{
+          width: '1200px',
+          backgroundColor: 'red',
+        }}
+      >
+        Large Content
+      </div>
+    </Example>
+
+    <RandomContent />
+
+    <h1>Example With Inputs</h1>
+    <Example>
+      <RandomContent />
+      <input type="text" placeholder="Input placeholder" />
+    </Example>
+
+    <h1>Example With maxWidth </h1>
+    <Example maxWidth="250px">
+      <RandomContent />
+      <input type="text" placeholder="Input placeholder" />
+    </Example>
+
+    <h1>Example With closeOnOverlayClick = false </h1>
+    <Example
+      closeOnOverlayClick={false}
+    >
+      <RandomContent />
+      <input type="text" placeholder="Input placeholder" />
+    </Example>
+
+    <h1>Example With closeOnEscapePress = false </h1>
+    <Example
+      closeOnEscapePress={false}
+    >
+      <RandomContent />
+      <input type="text" placeholder="Input placeholder" />
+    </Example>
+
+    <h1>Example With showCloseButton = false </h1>
+    <Example
+      showCloseButton={false}
+    >
+      <RandomContent />
+      <input type="text" placeholder="Input placeholder" />
+    </Example>
+
+    <h1>Dark theme example </h1>
+    <Example
+      backgroundColor="#000000"
+      closeButtonColor="#FFFFFF"
+    >
+      <RandomContent color="#FFFFFF" />
+      <input type="text" placeholder="Input placeholder" />
+    </Example>
+  </div>
 );
+
+render(<div id="app"> <Demo /></div>, document.getElementById('root'));
