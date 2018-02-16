@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> snapshots when close button is disabled renders correctly 1`] = `
+<Modal
+  backgroundColor="#FFFFFF"
+  closeButtonColor="#000000"
+  closeOnEscapePress={true}
+  closeOnOverlayClick={true}
+  domElement="body"
+  isOpen={true}
+  maxWidth="640px"
+  onClose={[MockFunction]}
+  overlayColor="rgba(0,0,0,0.3)"
+  showCloseButton={false}
+>
+  <div
+    className="modal-overlay modal-overlay--animated"
+    onClick={[Function]}
+    role="button"
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.3)",
+      }
+    }
+    tabIndex={0}
+  >
+    <div
+      className="modal-container modal-container--animated"
+      onClick={[Function]}
+      role="presentation"
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "maxWidth": "640px",
+        }
+      }
+    >
+      <div
+        className="modal-content"
+      >
+        <div>
+          Im the children
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`<Modal /> snapshots when it has a setted max width renders correctly 1`] = `
+<Modal
+  backgroundColor="#FFFFFF"
+  closeButtonColor="#000000"
+  closeOnEscapePress={true}
+  closeOnOverlayClick={true}
+  domElement="body"
+  isOpen={true}
+  maxWidth="1000px"
+  onClose={[MockFunction]}
+  overlayColor="rgba(0,0,0,0.3)"
+  showCloseButton={true}
+>
+  <div
+    className="modal-overlay modal-overlay--animated"
+    onClick={[Function]}
+    role="button"
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.3)",
+      }
+    }
+    tabIndex={0}
+  >
+    <div
+      className="modal-container modal-container--animated"
+      onClick={[Function]}
+      role="presentation"
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "maxWidth": "1000px",
+        }
+      }
+    >
+      <CloseButton
+        closeButtonColor="#000000"
+        onClose={[MockFunction]}
+      >
+        <div
+          className="close-button"
+          onClick={[MockFunction]}
+          role="button"
+          tabIndex={0}
+        >
+          <svg
+            height="12px"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="12px"
+          >
+            <title>
+              ic-close
+            </title>
+            <defs />
+            <g
+              fill="none"
+              fillRule="evenodd"
+              id="Icon-Close"
+              stroke="none"
+              strokeWidth="1"
+              transform="translate(-1374.000000, -555.000000)"
+            >
+              <polygon
+                fill="#000000"
+                fillRule="nonzero"
+                id="ic-close-white"
+                points="1398 557.418057 1395.58286 555 1386 564.586483 1376.41714 555 1374 557.418057 1383.58286 567.00454 1374 576.591023 1376.41714 579.009081 1386 569.422598 1395.58286 579.009081 1398 576.591023 1388.41714 567.00454"
+              />
+            </g>
+          </svg>
+        </div>
+      </CloseButton>
+      <div
+        className="modal-content"
+      >
+        <div>
+          Im the children
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`<Modal /> snapshots when it's closed renders just the base component 1`] = `
+<Modal
+  backgroundColor="#FFFFFF"
+  closeButtonColor="#000000"
+  closeOnEscapePress={true}
+  closeOnOverlayClick={true}
+  domElement="body"
+  isOpen={false}
+  maxWidth="640px"
+  onClose={[MockFunction]}
+  overlayColor="rgba(0,0,0,0.3)"
+  showCloseButton={true}
+/>
+`;
+
+exports[`<Modal /> snapshots when it's open renders correctly 1`] = `
+<Modal
+  backgroundColor="#FFFFFF"
+  closeButtonColor="#000000"
+  closeOnEscapePress={true}
+  closeOnOverlayClick={true}
+  domElement="body"
+  isOpen={true}
+  maxWidth="640px"
+  onClose={[MockFunction]}
+  overlayColor="rgba(0,0,0,0.3)"
+  showCloseButton={true}
+>
+  <div
+    className="modal-overlay modal-overlay--animated"
+    onClick={[Function]}
+    role="button"
+    style={
+      Object {
+        "backgroundColor": "rgba(0,0,0,0.3)",
+      }
+    }
+    tabIndex={0}
+  >
+    <div
+      className="modal-container modal-container--animated"
+      onClick={[Function]}
+      role="presentation"
+      style={
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "maxWidth": "640px",
+        }
+      }
+    >
+      <CloseButton
+        closeButtonColor="#000000"
+        onClose={[MockFunction]}
+      >
+        <div
+          className="close-button"
+          onClick={[MockFunction]}
+          role="button"
+          tabIndex={0}
+        >
+          <svg
+            height="12px"
+            version="1.1"
+            viewBox="0 0 24 24"
+            width="12px"
+          >
+            <title>
+              ic-close
+            </title>
+            <defs />
+            <g
+              fill="none"
+              fillRule="evenodd"
+              id="Icon-Close"
+              stroke="none"
+              strokeWidth="1"
+              transform="translate(-1374.000000, -555.000000)"
+            >
+              <polygon
+                fill="#000000"
+                fillRule="nonzero"
+                id="ic-close-white"
+                points="1398 557.418057 1395.58286 555 1386 564.586483 1376.41714 555 1374 557.418057 1383.58286 567.00454 1374 576.591023 1376.41714 579.009081 1386 569.422598 1395.58286 579.009081 1398 576.591023 1388.41714 567.00454"
+              />
+            </g>
+          </svg>
+        </div>
+      </CloseButton>
+      <div
+        className="modal-content"
+      >
+        <div>
+          Im the children
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
