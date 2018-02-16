@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import 'react-modals/src/styles/main.css';
+import 'react-super-modal/src/styles/main.css';
 
 import SimpleExample from './components/SimpleExample';
 

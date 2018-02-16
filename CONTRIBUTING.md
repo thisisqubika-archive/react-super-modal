@@ -5,7 +5,7 @@ This document provides general guidelines about how to contribute to any of the 
 
 ### Asking Questions
 
-We do not use Github issues for general support. We think this questions should be posted on stack overflow using **react-modals** tag.
+We do not use Github issues for general support. We think this questions should be posted on stack overflow using **react-super-modal** tag.
 
 ### Reporting issues
 
@@ -46,7 +46,7 @@ The easiest way to start contributing is searching open issues by `help wanted` 
 
 1. Fork the Project's repository.
 2. Clone your forked project into your machine: `git clone git@github.com:<your-github-username>/<Project>.git`
-3. Add the original project repository as upstream repository in your forked project: `git remote add upstream git@github.com:react-modals/<Project>.git`
+3. Add the original project repository as upstream repository in your forked project: `git remote add upstream git@github.com:react-super-modal/<Project>.git`
 4. Before starting a new feature make sure your forked master branch is synchronized upstream master branch. Considering you do not merge your pull request into master you can run: `git checkout master` and then `git pull upstream master`. Optionally `git push origin master`.
 5. Create a new branch. Note that the starting point is the upstream master branch HEAD. `git checkout -b my-feature-name`
 6. Stage all your changes `git add .` and commit them `git commit -m "Your commit message"`
