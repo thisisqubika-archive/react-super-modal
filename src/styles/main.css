@@ -69,6 +69,8 @@
 }
 
 .close-button {
+  position: absolute;
+  right: 0;
   cursor: pointer;
   width: var(--closeButtonSize);
   height: var(--closeButtonSize);
