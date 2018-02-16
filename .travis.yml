@@ -1,17 +1,11 @@
 language: node_js
-node:
-  - 8
-
-cache: yarn
-
-env:
-  # Do two runs, one for testing and one for linting.
-  matrix:
-    - TEST_TYPE=test
-    - TEST_TYPE=lint
-
+node_js:
+- '8'
+cache:
+- yarn
+dist: trusty
+sudo: false
 script:
-  # Download packages
-  - yarn
-  # Run testing or linting depending on the environment.
-- yarn $TEST_TYPE
+- yarn run lint
+- yarn run test
+- yarn run build
