@@ -1,7 +1,7 @@
 {
-  "name": "react-modals",
+  "name": "react-super-modal",
   "version": "1.0.0",
-  "main": "./dist/react-modals.js",
+  "main": "./dist/react-super-modal.js",
   "author": "Cristian Dotta <cristian.dotta@moove-it.com>",
   "license": "MIT",
   "scripts": {

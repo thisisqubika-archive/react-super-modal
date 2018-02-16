@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Modal from 'react-modals';
+import Modal from 'react-super-modal';
 
 class SimpleExample extends Component {
   constructor() {

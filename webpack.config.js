@@ -7,7 +7,7 @@ module.exports = {
   entry: ['./src/index.js'],
   output: {
     path: path.resolve('./dist'),
-    filename: 'react-modals.js',
+    filename: 'react-super-modal.js',
     publicPath: '/dist/',
     libraryTarget: 'commonjs2',
   },
@@ -31,7 +31,7 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin('react-modals.css'),
+    new ExtractTextPlugin('react-super-modal.css'),
   ],
   externals: {
     'prop-types': 'prop-types',

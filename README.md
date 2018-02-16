@@ -1,13 +1,13 @@
-# React Modals
+# React Super Modal [![npm version](https://badge.fury.io/js/react-super-modal.svg)](https://badge.fury.io/js/react-super-modal)
 An opinionated React modals library based on UX patterns and principles.
 
 ## Install
 
-`npm install react-modals`
+`npm install react-super-modal`
 
 or
 
-`yarn add react-modals`
+`yarn add react-super-modal`
 
 ## How to use
 
@@ -35,7 +35,7 @@ or
 Show modal on button click
 ```
 import React, { Component } from 'react';
-import Modal from 'react-modals';
+import Modal from 'react-super-modal';
 
 class SimpleExample extends Component {
   constructor() {
