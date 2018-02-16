@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CloseButton = ({ onClose, closeButtonColor }) => (
-  <div onClick={onClose} className="close-button">
+  <div onClick={onClose} className="close-button" role="button" tabIndex={0}>
     <svg width="12px" height="12px" viewBox="0 0 24 24" version="1.1">
       <title>ic-close</title>
       <defs />
