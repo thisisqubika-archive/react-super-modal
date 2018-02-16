@@ -5,8 +5,6 @@ module.exports = {
     'postcss-import': {},
     'postcss-url': {},
     precss: {},
-    'postcss-cssnext': {
-      browsers: ['last 2 versions', '> 5%'],
-    },
+    'postcss-cssnext': {},
   },
 };

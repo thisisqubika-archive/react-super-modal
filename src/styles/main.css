@@ -10,6 +10,9 @@
   border-radius: var(--borderRadius);
   max-height: var(--maxHeight);
 
+  left: 50%;
+  transform: translateX(-50%);
+
   @media (--onlyMobile) {
     left: 50%;
     top: 50%;
