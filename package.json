@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "./dist/react-super-modal.js",
   "author": "Cristian Dotta <cristian.dotta@moove-it.com>",
+  "repository": "https://github.com/moove-it/react-super-modal",
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack",

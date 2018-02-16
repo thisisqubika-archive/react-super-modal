@@ -6,5 +6,5 @@
 @custom-media --mobile (min-width: 320px);
 
 // Media queries to target only when the screen is exactly in that viewport
-@custom-media --onlyTablet (width >= 768px) and (width <= 1200px);
-@custom-media --onlyMobile (width >= 320px) and (width <= 768px);
+@custom-media --onlyTablet (width >= 768px) and (width < 1200px);
+@custom-media --onlyMobile (width >= 320px) and (width < 768px);
