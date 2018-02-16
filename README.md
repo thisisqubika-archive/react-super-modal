@@ -1,4 +1,4 @@
-# React Super Modal [![npm version](https://badge.fury.io/js/react-super-modal.svg)](https://badge.fury.io/js/react-super-modal)
+# React Super Modal [![npm version](https://badge.fury.io/js/react-super-modal.svg)](https://badge.fury.io/js/react-super-modal) [![Build Status](https://travis-ci.org/moove-it/react-super-modal.svg?branch=master)](https://travis-ci.org/moove-it/react-super-modal)
 An opinionated React modals library based on UX patterns and principles.
 
 ## Install
