@@ -16,13 +16,12 @@ exports[`<Modal /> snapshots when close button is disabled renders correctly 1`]
   <div
     className="modal-overlay modal-overlay--animated"
     onClick={[Function]}
-    role="button"
+    role="presentation"
     style={
       Object {
         "backgroundColor": "rgba(0,0,0,0.3)",
       }
     }
-    tabIndex={0}
   >
     <div
       className="modal-container modal-container--animated"
@@ -63,13 +62,12 @@ exports[`<Modal /> snapshots when it has a setted max width renders correctly 1`
   <div
     className="modal-overlay modal-overlay--animated"
     onClick={[Function]}
-    role="button"
+    role="presentation"
     style={
       Object {
         "backgroundColor": "rgba(0,0,0,0.3)",
       }
     }
-    tabIndex={0}
   >
     <div
       className="modal-container modal-container--animated"
@@ -163,13 +161,12 @@ exports[`<Modal /> snapshots when it's open renders correctly 1`] = `
   <div
     className="modal-overlay modal-overlay--animated"
     onClick={[Function]}
-    role="button"
+    role="presentation"
     style={
       Object {
         "backgroundColor": "rgba(0,0,0,0.3)",
       }
     }
-    tabIndex={0}
   >
     <div
       className="modal-container modal-container--animated"
