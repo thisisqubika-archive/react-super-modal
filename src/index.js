@@ -76,8 +76,7 @@ export default class Modal extends React.PureComponent {
     return (
       <div
         onClick={onOverlayClick}
-        role="button"
-        tabIndex={0}
+        role="presentation"
         className="modal-overlay modal-overlay--animated"
         style={{ backgroundColor: overlayColor }}
       >
