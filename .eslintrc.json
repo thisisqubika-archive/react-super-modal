@@ -2,10 +2,12 @@
     "extends": "airbnb",
     "plugins": [
         "react",
-        "import"
+        "import",
+        "jest"
     ],
     "env": {
-      "browser": true
+      "browser": true,
+      "jest/globals": true
     },
     "rules": {
       "react/jsx-filename-extension": "off",
