@@ -81,16 +81,18 @@ export default class Modal extends React.PureComponent {
         className="modal-overlay modal-overlay--animated"
         style={{ backgroundColor: overlayColor }}
       >
-        <div onClick={onModalClick} className="modal-container modal-container--animated" style={{ backgroundColor, maxWidth }}>
-          <div className="modal-header">
-            {showCloseButton &&
-              <CloseButton onClose={onClose} closeButtonColor={closeButtonColor} />
-            }
-          </div>
+        <div
+          onClick={onModalClick}
+          className="modal-container modal-container--animated"
+          style={{ backgroundColor, maxWidth }}
+          role="presentation"
+        >
+          {showCloseButton &&
+            <CloseButton onClose={onClose} closeButtonColor={closeButtonColor} />
+          }
           <div className="modal-content">
             {children}
           </div>
-          <div className="modal-footer" />
         </div>
       </div>
     );
