@@ -11,6 +11,15 @@
     "lint": "eslint .",
     "test": "jest"
   },
+  "files": [
+    "dist",
+    "test",
+    "src",
+    "demo",
+    ".babelrc",
+    "webpack.config.js",
+    ".eslintrc.json"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
@@ -61,5 +70,13 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js"
     }
-  }
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "super",
+    "light",
+    "small",
+    "simple"
+  ]
 }
