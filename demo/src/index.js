@@ -14,9 +14,6 @@ const Demo = () => (
 
     <input type="text" placeholder="Input Placeholder" />
 
-    <RandomContent />
-    <RandomContent />
-
     <h1>Example with large content.</h1>
     <Example>
       <RandomContent />
@@ -29,8 +26,6 @@ const Demo = () => (
         Large Content
       </div>
     </Example>
-
-    <RandomContent />
 
     <h1>Example With Inputs</h1>
     <Example>
