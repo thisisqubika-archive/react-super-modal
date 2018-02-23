@@ -28,9 +28,9 @@ module.exports = {
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       {
         test: /\.css$/,
-        include: [/main.css/],
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
       {
         test: /\.css$/,
         exclude: [/node_modules/, /main.css/],
