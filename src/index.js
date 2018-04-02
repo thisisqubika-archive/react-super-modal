@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import LegacyPortal from './components/LegacyPortal';
 import CloseButton from './components/CloseButton';
 import { SCROLL_LOCKED_CLASSNAME } from './constants';
 import './styles/main.css';
@@ -103,7 +104,15 @@ export default class Modal extends React.PureComponent {
     if (!isOpen) return null;
 
     this.lockBodyScroll();
-    return ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
+    if (ReactDOM.createPortal) {
+      return ReactDOM.createPortal(this.renderModalMarkup(), this.domElement);
+    }
+
+    return (
+      <LegacyPortal node={this.domElement}>
+        {this.renderModalMarkup()}
+      </LegacyPortal>
+    );
   }
 }
 
