@@ -10,7 +10,7 @@
 
 .modal-overlay--animated {
   @media (--tablet) {
-    animation: showOvarlay 0.2s 0s;
+    animation: showOverlay 0.2s 0s;
   }
 }
 
@@ -19,7 +19,7 @@
   to {top: var(--top);}
 }
 
-@keyframes showOvarlay {
+@keyframes showOverlay {
   from {opacity:  0;}
   to {opacity: 1;}
 }
