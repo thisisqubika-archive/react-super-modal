@@ -16,28 +16,30 @@ export default class Portal extends Component {
   }
 
   componentWillUnmount() {
-    ReactDOM.unmountComponentAtNode(this.defaultNode || this.props.node);
-    if (this.defaultNode) {
-      document.body.removeChild(this.defaultNode);
+    ReactDOM.unmountComponentAtNode(this.containerNode);
+    if (this.containerNode) {
+      document.body.removeChild(this.containerNode);
     }
-    this.defaultNode = null;
+    this.containerNode = null;
     this.portal = null;
   }
 
   renderPortal() {
     const { node, children } = this.props;
-    if (!node && !this.defaultNode) {
-      this.defaultNode = document.createElement('div');
-      document.body.appendChild(this.defaultNode);
-    }
 
+    if ((!node && !this.containerNode) || node.tagName === 'BODY') {
+      this.containerNode = document.createElement('div');
+      document.body.appendChild(this.containerNode);
+    } else {
+      this.containerNode = node;
+    }
     // https://gist.github.com/jimfb/d99e0678e9da715ccf6454961ef04d1b
     const childrenElement = typeof children.type === 'function' ? React.cloneElement(children) : children;
 
     this.portal = ReactDOM.unstable_renderSubtreeIntoContainer(
       this,
       childrenElement,
-      node || this.defaultNode,
+      this.containerNode,
     );
   }
 
