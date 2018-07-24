@@ -3,16 +3,16 @@ An opinionated React modals library based on UX patterns and principles.
 
 ## Install
 
-`npm install react-super-modal`
+`npm install --dev react-super-modal`
 
 or
 
-`yarn add react-super-modal`
+`yarn add --dev react-super-modal`
 
 ## How to use
 
 *React Modals* is just a component that will render it's children inside a modal.
-```
+```javascript
 <Modal isOpen={showModal} onClose={onModalClose}>
   ...
   Modal Content
@@ -33,10 +33,12 @@ or
 
 ### Examples
 Show modal on button click
-```
+
+```javascript
 import React, { Component } from 'react';
 import Modal from 'react-super-modal';
-
+// if you want to use our styles
+import 'react-super-modal/dist/react-super-modal.css';
 class SimpleExample extends Component {
   constructor() {
     super();
